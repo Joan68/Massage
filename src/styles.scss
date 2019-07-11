@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 600px) {
+    .navbar {
+        background: black;
+    }
+  }
+
+.navbar .container {
+      margin-left: 0px;
+}
+
+.controls-top {
+    display:none!important;
+}

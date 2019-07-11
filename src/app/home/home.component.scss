@@ -1,0 +1,83 @@
+.intro-header {
+    height: unset !important;
+  }
+  .top-nav-collapse {
+    background-color: #78909c !important;
+  }
+  .view {
+    height: 100vh !important;
+      /* The image used */
+  background: white;
+  /* Full height */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .navbar:not(.top-nav-collapse) {
+    background: transparent !important;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background: #78909c !important;
+    }
+  }
+  h1 {
+    letter-spacing: 0px;
+  }
+  h5 {
+    letter-spacing: 3px;
+  }
+  .hr-light {
+    border-top: 3px solid #fff;
+    width: 80px;
+  }
+  @media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+      height: 700px;
+    }
+  }
+
+  body,
+html {
+  height: 100%;
+}
+
+.bg-none {
+    background: transparent;
+}
+
+@media screen and (min-width: 601px) {
+    p {
+      font-size: 1vw;
+    }
+  }
+  
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    p {
+      font-size: 3.5vw;
+    } 
+    img {
+        width: 30vw!important;
+    }
+    .navbar {
+        background: black;
+    }
+    .imgAyurveda {
+      display: none;
+    }
+  }
+
+#viewAutoHeight {
+    height: auto!important;
+}
+
+.goToAyurveda {
+  bottom:20px;
+  left:0;
+  right: 0;
+}
