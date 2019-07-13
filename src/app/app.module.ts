@@ -3,10 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-// import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
-import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
-import { CarouselModule, WavesModule, CardsFreeModule, NavbarModule, CardsModule, SmoothscrollModule} from 'ng-uikit-pro-standard'
-import { ButtonsModule, IconsModule } from 'ng-uikit-pro-standard'
+import { MDBBootstrapModulesPro, MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+// import { CarouselModule, WavesModule, CardsFreeModule, NavbarModule, CardsModule, SmoothscrollModule, InputsModule} from 'ng-uikit-pro-standard';
+// import { ButtonsModule, IconsModule } from 'ng-uikit-pro-standard';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ConnectionService } from './connection.service'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AgmCoreModule } from '@agm/core';
 import { CarouselComponentComponent } from './carousel-component/carousel-component.component';
@@ -32,19 +35,27 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    // MDBBootstrapModulesPro.forRoot(),
+    MDBBootstrapModulesPro.forRoot(),
     AgmCoreModule.forRoot({ apiKey: '7jdzZ9x2gChgxyaF-5si' }),
-    CarouselModule.forRoot(),
-    WavesModule.forRoot(),
-    CardsModule.forRoot(),
-    NavbarModule,
-    ButtonsModule,
-    IconsModule,
+    // CarouselModule.forRoot(),
+    // WavesModule.forRoot(),
+    // CardsModule.forRoot(),
+    // NavbarModule,
+    // ButtonsModule,
+    // IconsModule,
     AppRoutingModule,
-    CardsFreeModule,
-    SmoothscrollModule.forRoot(),
+    // CardsFreeModule,
+    // SmoothscrollModule.forRoot(),
+    // InputsModule.forRoot(),
+    // InputsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
-  providers: [MDBSpinningPreloader,],
+  exports:[
+    
+  ],
+  providers: [MDBSpinningPreloader, ConnectionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
