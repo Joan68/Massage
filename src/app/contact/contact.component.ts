@@ -36,7 +36,7 @@ optionsSelect: Array<any>;
   }
   SendMessage(form)
   {
-    console.log('Contenu de ton form : ',form.values);
+    console.log('Contenu de ton form : ',this.ContactMe_current);
 
     this.ContactService.post_SendEmail(form.values).subscribe((res: any)=>{
       console.log("Réponse de l'API : ", res);
