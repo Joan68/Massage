@@ -9,30 +9,12 @@ import {ContactService} from './contact.service';   //ton service
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-
-contactForm: FormGroup;
-disabledSubmitButton: boolean = true;
-optionsSelect: Array<any>;
-
-  @HostListener('input') oninput() {
-
-    if (this.contactForm.valid) {
-      this.disabledSubmitButton = false;
-    }
-  }
+export class ContactComponent implements OnInit {s
 
   ContactMe_current: ContactMe_Data= { name:null,email:null,subject:null,message:null };//On crée un objet sur le modèle de ContactMe_Data (voir contact.ts), dans lequel on va mettre toutes les infos du form
   
-  constructor(private fb: FormBuilder, private connectionService: ConnectionService, private ContactService : ContactService) { // on oublie pas de rajouter le service dans le constructeur
+  constructor( private connectionService: ConnectionService, private ContactService : ContactService) { // on oublie pas de rajouter le service dans le constructeur
 
-  // this.contactForm = fb.group({
-  //   'contactFormName': ['', Validators.required],
-  //   'contactFormEmail': ['', Validators.compose([Validators.required, Validators.email])],
-  //   'contactFormSubjects': ['', Validators.required],
-  //   'contactFormMessage': ['', Validators.required],
-  //   'contactFormCopy': [''],
-  //   });
   }
   SendMessage(form)
   {
@@ -44,22 +26,5 @@ optionsSelect: Array<any>;
   }
   ngOnInit() {
 
-  this.optionsSelect = [
-    { value: 'Feedback', label: 'Feedback' },
-    { value: 'Report a bug', label: 'Report a bug' },
-    { value: 'Feature request', label: 'Feature request' },
-    { value: 'Other stuff', label: 'Other stuff' },
-    ];
   }
-
-  // onSubmit() {
-  //   this.connectionService.sendMessage(this.contactForm.value).subscribe(() => {
-  //     alert('Your message has been sent.');
-  //     this.contactForm.reset();
-  //     this.disabledSubmitButton = true;
-  //   }, error => {
-  //     console.log('Error', error);
-  //   });
-  // }
-
-  }
+}
