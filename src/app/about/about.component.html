@@ -1,9 +1,9 @@
-<div class="container flex-center">
+<div class="container flex-center" id="top-section">
   <div class="row pt-2 mt-3 w-100">
     <div class="col-md-12">
       <div class="text-center">
         <hr class="hr-light wow fadeInDown" data-wow-delay="0.4s">
-        <mdb-card class="testimonial-card">
+        <mdb-card class="testimonial-card z-depth-5">
           <!--Bacground color-->
           <div class="card-up peach-gradient">
           </div>
@@ -46,4 +46,12 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- Back to navbar button -->
+<div class="fixed-action-btn invisible" id="scrollButton" style="bottom: 45px; right: 24px;">
+  <a mdbBtn floating="true" size="lg" color="dark" class="waves-light" #button mdbWavesEffect mdbPageScroll
+    href="#top-section">
+    <mdb-icon fas icon="arrow-up"></mdb-icon>
+  </a>
 </div>

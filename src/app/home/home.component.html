@@ -1,5 +1,5 @@
 <!-- Intro Section -->
-<div class="view jarallax" data-jarallax='{"speed": 0.2}'
+<div class="view jarallax" id="top-section" data-jarallax='{"speed": 0.2}'
   style="background-image: url(https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg);background-repeat:no-repeat;">
   <div class="full-bg-img mask rgba-black-light">
     <div class="container flex-center">
@@ -80,7 +80,7 @@
     <div class="py-5">
 
       <!-- Content -->
-      <h2 class="card-title h2 my-4 py-2 wow fadeInDown">Ses bien faits</h2>
+      <h2 class="card-title h2 my-4 py-2 wow fadeInDown">Ses bienfaits</h2>
       <p class="mb-4 pb-2 px-md-5 mx-md-5">
         L'Ayurveda nous aide à renforcer ou maintenir cet équilibre en adoptant des gestes et des soins
         variés dans l'alimentation, les massages, les plantes, le yoga, la méditation et les soins d'hygiène.</p>
@@ -110,4 +110,12 @@
       </div>
     </div>
   </div>
+</div>
+
+
+<!-- Back to navbar button -->
+<div class="fixed-action-btn invisible" id="scrollButton" style="bottom: 45px; right: 24px;">
+  <a mdbBtn floating="true" size="lg" color="dark" class="waves-light" #button mdbWavesEffect mdbPageScroll href="#top-section">
+    <mdb-icon fas icon="arrow-up"></mdb-icon>
+  </a>
 </div>
