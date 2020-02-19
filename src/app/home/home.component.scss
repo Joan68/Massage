@@ -1,5 +1,15 @@
 .view {
-  height: 101vh !important;
+  height: 101vh;
+  /* The image used */
+  background: white;
+  /* Full height */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.viewHeight {
+  height: 50vh !important;
   /* The image used */
   background: white;
   /* Full height */
@@ -84,7 +94,7 @@ html {
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991px) {
   p {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 // Large devices (desktops, less than 1200px)

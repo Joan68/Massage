@@ -21,3 +21,81 @@
     line-height: 40px;
   }
 }
+
+.card-wrapper {
+  margin-bottom: 5%;
+}
+
+// Large devices (desktops, less than 1200px)
+
+a.btn:not([href]):not([tabindex]) {
+  position: sticky;
+  top: 55px;
+  z-index: 100;
+}
+
+@media (max-width: 320px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+// .side-nav {
+//   transform: translateY(6%)!important;
+// }
+
+.md-tabs .nav-item a {
+  color: black;
+}
+
+.side-nav .sidenav-bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 240px;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
+.mask-strong:after {
+  background: linear-gradient(40deg, #fc6262, #ffd86f) !important;
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: linear-gradient(40deg, #fc6262, #ffd86f) !important;
+}
+
+.tab-content {
+  padding-top: 1rem;
+}
+
+.md-tabs {
+  margin-bottom: 0rem;
+}
+
+.testimonial-card .avatar {
+  width: 180px;
+}
+
+@media (min-width: 768px) and (max-width: 1000px){
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-md-9 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+}

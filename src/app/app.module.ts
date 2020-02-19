@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConnectionService } from './connection.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+// For MDB Angular Pro
+import { ScrollSpyModule, WavesModule } from 'ng-uikit-pro-standard'
 
 import { AgmCoreModule } from '@agm/core';
 import { CarouselComponentComponent } from './carousel-component/carousel-component.component';
@@ -20,6 +23,7 @@ import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { TemoignageComponent } from './temoignage/temoignage.component'; 
 
 
 @NgModule({
@@ -31,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     NavComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    TemoignageComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,8 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    ScrollSpyModule,
+    ScrollToModule.forRoot(),
   ],
   exports:[
     

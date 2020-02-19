@@ -11,58 +11,41 @@ export class CarouselComponentComponent implements OnInit {
 
   cards = [
     {
-      title: 'Card Title 1',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
+      title: 'Massage Ayurvédique Abhyanga',
+      description: 'Massage à l’huile chaude pour harmoniser les trois doshas',
+      // img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
+    },
+    // {
+    //   title: 'Soin Etoile Tête Mains Pieds',
+    //   description: 'Massage à l’huile chaude pour apaiser le mental et libèrer les tensions',
+    // },
+    {
+      title: 'Udvartana',
+      description: 'Massage détoxifiant à la farine de pois chiche',
+      // img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
+    },
+    // {
+    //   title: 'Ananda',
+    //   description: 'Soin énergétique de la colonne vertébrale',
+    // },
+    // {
+    //   title: 'Mardana',
+    //   description: 'Massage tonique du dos, du torse, des bras et jambe à l’huile chaude',
+    // },
+    {
+      title: 'Massage maternité',
+      description: 'Massage à l’huile chaude adapté aux besoins de la maman pour vivre sereinement la grossesse',
+      // img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
     },
     {
-      title: 'Card Title 2',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
+      title: 'Massage post-natal',
+      description: 'Massage revitalisant à l’huile chaude',
+      // img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
     },
     {
-      title: 'Card Title 3',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
-    },
-    {
-      title: 'Card Title 4',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 5',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
-    },
-    {
-      title: 'Card Title 6',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
-    },
-    {
-      title: 'Card Title 7',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
-    },
-    {
-      title: 'Card Title 8',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
-    },
-    {
-      title: 'Card Title 9',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Button',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg'
+      title: 'Massage du nourrisson',
+      description: 'Apprendre à masser son bébé sous forme d’atelier',
+      // img: 'https://images.pexels.com/photos/275752/pexels-photo-275752.jpeg?cs=srgb&dl=massage-physio-physiotherapy-275752.jpg&fm=jpg'
     },
   ];
   slides: any = [[]];

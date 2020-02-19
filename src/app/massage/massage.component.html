@@ -2,281 +2,446 @@
     <div class="row pt-2 mt-3 w-100">
         <div class="col-md-12">
             <div class="text-center">
-                <h2 class="h1 h1-reponsive dark-text font-up font-bold mb-3 mt-5 wow fadeInDown" data-wow-delay="0.3s">
-                    <strong>Les massages</strong></h2>
-                <hr class="hr-light wow fadeInDown" data-wow-delay="0.4s">
 
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <!--Rotating card-->
-                        <mdb-flipping-card #cards>
-                            <div class="face front tp-box_side tp-box_front">
-                                <div class="card-up">
-                                    <img src="https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg"
-                                        class="img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <h4>Massage 1</h4>
-                                    <p class="pb-3">Indien</p>
-                                    <a class="rotate-btn" data-card="card-1" (click)="cards.toggle()">
-                                        <i class="fas fa-redo"></i> En savoir plus</a>
-                                </div>
-                            </div>
-                            <div class="back tp-box_side tp-box_back">
-                                <h4>About massage</h4>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae,
-                                    dolores dicta. Blanditiis rem
-                                    amet repellat,
-                                    dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum
-                                    eum, officia laudantium
-                                    quaerat?</p>
-                                <hr>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm fb-ic">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
+                <hr class="wow fadeInDown mt-5" data-wow-delay="0.4s">
+
+                <p><strong>La durée du massage peut être variable en fonction de vos besoins et celui-ci est toujours
+                        précédée d'un
+                        questionnaire visant à définir le massage et l'huile les plus appropriés en fonction de la
+                        constitution de la personne, et en tenant compte des déséquilibres éventuels.</strong></p>
+
+                <hr class="wow fadeInDown" data-wow-delay="0.4s">
+
+                <!-- SideNav slide-out button -->
+                <a (click)="sidenav.toggle()" mdbBtn color="primary"
+                    class="p-3 button-collapse orange lighten-2 text-dark">
+                    <mdb-icon fas icon="bars"></mdb-icon> Liste des massages
+                </a>
+                <!--/. SideNav slide-out button -->
+
+                <!-- Sidebar navigation -->
+                <mdb-side-nav #sidenav class="sn-bg-4 sidenav-bg mask-strong fixed" [fixed]="true">
+                    <li>
+                        <div class="logo-wrapper waves-light">
+                            <h2>Liste des massages</h2>
+                        </div>
+                    </li>
+                    <li></li>
+                    <links>
+                        <!-- Side navigation links -->
+                        <li>
+                            <ul class="collapsible collapsible-accordion">
+
+                                <mdb-accordion [multiple]="true" aria-multiselectable="false">
+                                    <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'Abhyanga'">Abhyanga</button></li>
+                                    <!-- <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'SoinsEtoile'">Soins Etoile tête mains pieds</button></li> -->
+                                    <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'Udvartana'">Udvartana</button></li>
+                                    <!-- <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'Ananda'">Ananda</button></li> -->
+                                    <!-- <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'Mardana'">Mardana</button></li> -->
+                                    <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'MassageMaternite'">Soin maternité</button></li>
+                                    <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'MassagePostNatal'">Massage post-natal</button></li>
+                                    <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'MassageDuNourrisson'">Soin du nourrisson</button>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm tw-ic">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
+                                    <li><button class="colorBouttonRed" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'Massage du nourrisson'">
+                                            <mdb-icon far icon="window-close"></mdb-icon>Fermer la liste
+                                        </button>
                                     </li>
-                                </ul>
-                                <a class="rotate-btn" data-card="card-1" (click)="cards.toggle()">
-                                    <i class="fas fa-undo"></i> En savoir plus</a>
-                            </div>
-                        </mdb-flipping-card>
+
+                                </mdb-accordion>
+                            </ul>
+                        </li>
+                        <!--/. Side navigation links -->
+                    </links>
+                    <div class="sidenav-bg mask-strong"></div>
+                </mdb-side-nav>
+                <!--/. Sidebar navigation -->
+
+                <!-- Card1 -->
+                <mdb-card cascade="true" class="mb-3" id="Abhyanga" #AbhyangaRef>
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Massage Ayurvédique Abhyanga</h2>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <mdb-flipping-card #cards2>
-                            <div class="face front tp-box_side tp-box_front">
-                                <div class="card-up">
-                                    <img src="https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg"
-                                        class="img-fluid">
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-justify">
+                        <!--Card content-->
+
+                        <!-- Nav Tabs -->
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+                            <!--Panel 1-->
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>L'Abhyanga est un massage à l'huile chaude et aux plantes propre à votre
+                                            constitution qui permet d'harmoniser les trois doshas.</p><br>
+                                        <p>Il calme le système nerveux, ôte le stress, l'anxiété et l'angoisse. Il
+                                            améliore la concentration et la confiance en soi. Il nourrit les tissus et
+                                            les articulations. Il est drainant, élimine les toxines, stimule la
+                                            circulation sanguine et lymphatique, fortifie le système immunitaire,
+                                            ralentissant ainsi le vieillissement. Il améliore la digestion et
+                                            l'élimination. Il augmente la force, la souplesse et la mobilité du corps.
+                                            Il permet de libérer les tensions et émotions réprimées... Il calme le
+                                            corps, l'esprit et le cœur.</p><br>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <h4>Massage 2</h4>
-                                    <p class="pb-3">Indien</p>
-                                    <a class="rotate-btn" data-card="card-1" (click)="cards2.toggle()">
-                                        <i class="fas fa-redo"></i> En savoir plus</a>
+                            </mdb-tab>
+                            <!--Panel 2-->
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>Abhyanga adulte 60 mn :</strong> 65 €</p>
+                                        <p><strong>Abhyanga adulte avec soins locaux optionnels Snehana-Svedana* 75 mn
+                                                :</strong> 80 €
+                                        </p>
+                                        <p><strong>Abhyanga 8-12 ans 30 mn :</strong> 30 €</p>
+                                        <p><strong>Abhyanga 12-15 ans 50 mn :</strong> 50 €</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="back tp-box_side tp-box_back">
-                                <h4>About massage</h4>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae,
-                                    dolores dicta. Blanditiis rem
-                                    amet repellat,
-                                    dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum
-                                    eum, officia laudantium
-                                    quaerat?</p>
-                                <hr>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm fb-ic">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm tw-ic">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a class="rotate-btn" data-card="card-1" (click)="cards2.toggle()">
-                                    <i class="fas fa-undo"></i> Click here to rotate back</a>
-                            </div>
-                        </mdb-flipping-card>
+                            </mdb-tab>
+                            <mdb-tab heading="Option Snehana-Svedana*">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>
+                                            <strong>Snehana</strong> qui signifie beaucoup d'huile et
+                                            <strong>Svedana</strong> qui veut dire transpiration
+                                            est une méthode utilisant les plaques de boue chaudes qui vient en
+                                            complément de l'Abyhanga. Cela est particulièrement recommandé pour les
+                                            personnes souffrant de problèmes de dos, excès de <strong>Vata</strong>,
+                                            arthrose, arthrite,
+                                            polyarthrite, hernie, sciatique, burn out, dépression, tensions....
+                                        </p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </mdb-card>
+                <!--/.Card-->
+
+                <!-- Card2 -->
+                <!-- <mdb-card cascade="true" class="mb-3" id="SoinsEtoile" #SoinsEtoileref>
+
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Soins Etoile tête mains pieds</h2>
                     </div>
-                    <div class="col-md-4">
-                        <mdb-flipping-card #cards3>
-                            <div class="face front tp-box_side tp-box_front">
-                                <div class="card-up">
-                                    <img src="https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg"
-                                        class="img-fluid">
+
+                    <mdb-card-body cascade="true" class="text-justify">
+
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-2 sunny-morning-gradient'" [contentClass]="'card'">
+
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Soin à l'huile chaude et aux plantes adapté à votre constitution.</p><br>
+
+                                        <p>Calme le système nerveux, élimine la fatigue mentale, amène concentration et
+                                            détente. Il induit un sommeil profond. Il nourrit la peau et les cheveux. Il
+                                            agit sur le plan physique, affectif et mental.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="card-body">
-                                    <h4>Massage 3</h4>
-                                    <p class="pb-3">Indien</p>
-                                    <a class="rotate-btn" data-card="card-1" (click)="cards3.toggle()">
-                                        <i class="fas fa-redo"></i> Click here to rotate</a>
+                            </mdb-tab>
+
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>50 mn :</strong> 50 €</p><br>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="back tp-box_side tp-box_back">
-                                <h4>About massage</h4>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae,
-                                    dolores dicta. Blanditiis rem
-                                    amet repellat,
-                                    dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum
-                                    eum, officia laudantium
-                                    quaerat?</p>
-                                <hr>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm fb-ic">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm tw-ic">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a class="rotate-btn" data-card="card-1" (click)="cards3.toggle()">
-                                    <i class="fas fa-undo"></i> Click here to rotate back</a>
-                            </div>
-                        </mdb-flipping-card>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+
+                </mdb-card> -->
+                <!--/.Card -->
+
+                <!-- Card3 -->
+                <mdb-card cascade="true" class="mb-3" id="Udvartana" #UdvartanaRef>
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Massage Ayurvédique Udvartana</h2>
                     </div>
-                </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-justify">
+                        <!--Card content-->
+
+                        <!-- Nav Tabs -->
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+                            <!--Panel 1-->
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Soin minceur détoxifiant</p><br>
+                                        <p>C'est un massage gommage détoxifiant et très vigoureux utilisant la farine de
+                                            pois chiche. Il participe à l'élimination de l'humidité et des congestions
+                                            liées aux toxines. Il casse les cellules graisseuses et favorise ainsi la
+                                            perte de poids. Il éclaircit le mental et dynamise.
+                                        </p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                            <!--Panel 2-->
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>60 mn :</strong> 65€
+                                        </p>
+                                        <p><strong>Udvartna avec soins optionnels Udgarshana</strong> (soins locaux à
+                                            base de farine de farine de pois chiche et de plantes activant la
+                                            microcirculation)
+                                            <strong>75 mn :</strong> 85 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </mdb-card>
+                <!--/.Card-->
+
+                <!-- Card4 -->
+                <!-- <mdb-card cascade="true" class="mb-3" id="Ananda" #AnandaRef>
+
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Massage Ayurvédique Ananda</h2>
+                    </div>
+
+                    <mdb-card-body cascade="true" class="text-justify">
+
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>C'est un massage subtil de la colonne vertébrale. Il favorise la libre
+                                            circulation du système énergétique et nerveux.</p><br>
+                                        <p>Il aide à libérer les tensions et a une action réflexe sur les organes
+                                            correspondants, puisque chaque vertèbre est reliée à un organe.
+                                            Il peut être fait avant un Abhyanga.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </mdb-tab>
+
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>30 mn :</strong> 35 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+
+
+                </mdb-card> -->
+                <!--/.Card-->
+
+                <!-- Card5 -->
+                <!-- <mdb-card cascade="true" class="mb-3" id="Mardana" #MardanaRef>
+
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Massage Ayurvédique Mardana</h2>
+                    </div>
+
+                    <mdb-card-body cascade="true" class="text-justify">
+
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Massage tonique du dos, du torse, des bras et des jambes.
+                                            Il libère les tensions et favorise l'évacuation de l'<strong>acide lactique*</strong>. Il
+                                            participe à la récupération du corps après des efforts physiques.</p>
+                                        <p><br>
+                                            <strong>Acide lactique :</strong>
+                                            C'est un déchet métabolique produit lorsqu'un muscle est soumis à un effort
+                                            intense et continu pendant plus ou moins une minute. La production d'acide
+                                            lactique est à l'origine des douleurs musculaires, brûlures et autres
+                                            crampes.
+                                        </p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>30 mn :</strong> 35 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+
+                </mdb-card> -->
+                <!--/.Card-->
+                <!-- Card6 -->
+                <mdb-card cascade="true" class="mb-3" id="MassageMaternite" #MassageMaterniteRef>
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Soin maternité</h2>
+                    </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-justify">
+                        <!--Card content-->
+
+                        <!-- Nav Tabs -->
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+                            <!--Panel 1-->
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Remède idéal contre les maux de la grossesse, ce massage est un véritable
+                                            soutien psychologique et physique.</p><br>
+                                        <p>Ce massage se compose principalement de mouvements doux et enveloppants
+                                            permettant une relaxation profonde. Le bien-être de la maman influe sur
+                                            celui du bébé. Il prévient les déséquilibres pendant la grossesse tel que
+                                            l’insomnie, l’hyper-émotivité, les maux de dos, les jambes lourdes…
+                                        </p><br>
+                                        <p>
+                                            Il peut être reçu dès le 4ème mois et idéalement chaque mois, jusqu’au
+                                            terme.
+                                        </p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                            <!--Panel 2-->
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>60 mn :</strong> 65 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </mdb-card>
+                <!--/.Card-->
+
+                <!-- Card7 -->
+                <mdb-card cascade="true" class="mb-3" id="MassagePostNatal" #MassagePostNatalRef>
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Massage post-natal</h2>
+                    </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-justify">
+                        <!--Card content-->
+
+                        <!-- Nav Tabs -->
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+                            <!--Panel 1-->
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>
+                                            Idéal pour prendre soin de son corps après l’accouchement et permettre un
+                                            rétablissement rapide, il favorise également la convalescence en cas de
+                                            césarienne.
+                                        </p><br>
+                                        <p>
+                                            Ce massage est conseillé dès que possible après l’accouchement et environ un
+                                            mois après une césarienne le temps de la cicatrisation.<br>
+                                            C’est un soin harmonisant qui permet de rétablir l’équilibre énergétique de
+                                            la maman. Il détend le corps en douceur et aide les organes à reprendre
+                                            doucement leur place. Il soulage les tensions, favorise la lactation, et
+                                            évite le baby blues.
+                                        </p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                            <!--Panel 2-->
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>60mn :</strong> 65 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </mdb-card>
+                <!--/.Card-->
+
+                <!-- Card8 -->
+                <mdb-card cascade="true" class="mb-3" id="MassageDuNourrisson" #MassageDuNourrisson>
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Soin du nourrisson</h2>
+                    </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-justify">
+                        <!--Card content-->
+
+                        <!-- Nav Tabs -->
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+                            <!--Panel 1-->
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Partager un moment de bien être seule ou en famille en apprenant comment
+                                            masser votre bébé.</p>
+                                        <p>Le massage des bébés est une longue tradition en Inde.</p>
+                                        <p>Un Abhyanga pratiqué de façon quotidienne au bébé va lui permettre de
+                                            développer motricité et coordination. C’est un touché apaisant, enveloppant
+                                            et rassurant favorisant une croissance harmonieuse</p>
+                                        <p>L’Abhyanga stimule le système circulatoire et digestif du bébé, renforce le
+                                            système immunitaire et nerveux.</p>
+                                        <p>Ce soin est recommandé dès un mois et jusqu’à 3 ans.
+                                            Il vous est proposé sous forme d’atelier afin de vous accompagner et vous
+                                            rendre autonome dans la pratique. L’idéal étant de le pratiquer pendant la
+                                            grossesse sur un poupon afin d’être mieux préparée à l’arrivé du bébé.
+                                        </p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                            <!--Panel 2-->
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>45mn :</strong> 50 €</p>
+                                        <p><strong>2 x 45mn :</strong> 90 €</p>
+                                        <p>A domicile :</p>
+                                        <p><strong>45mn :</strong> 70 €</p>
+                                        <p><strong>2 x 45mn :</strong> 120 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </mdb-card>
+                <!--/.Card-->
             </div>
         </div>
+        <hr>
     </div>
-</div>
-
-<div class="container flex-center">
-    <div class="row pt-2 mt-3 w-100">
-        <div class="col-md-12">
-            <div class="text-center">
-                <hr class="hr-light wow fadeInDown" data-wow-delay="0.4s">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <!--Rotating card-->
-                        <mdb-flipping-card #cards4>
-                            <div class="face front tp-box_side tp-box_front">
-                                <div class="card-up">
-                                    <img src="https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg"
-                                        class="img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <h4>Massage 1</h4>
-                                    <p class="pb-3">Indien</p>
-                                    <a class="rotate-btn" data-card="card-1" (click)="cards4.toggle()">
-                                        <i class="fas fa-redo"></i> En savoir plus</a>
-                                </div>
-                            </div>
-                            <div class="back tp-box_side tp-box_back">
-                                <h4>About massage</h4>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae,
-                                    dolores dicta. Blanditiis rem
-                                    amet repellat,
-                                    dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum
-                                    eum, officia laudantium
-                                    quaerat?</p>
-                                <hr>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm fb-ic">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm tw-ic">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a class="rotate-btn" data-card="card-1" (click)="cards4.toggle()">
-                                    <i class="fas fa-undo"></i> En savoir plus</a>
-                            </div>
-                        </mdb-flipping-card>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <mdb-flipping-card #cards5>
-                            <div class="face front tp-box_side tp-box_front">
-                                <div class="card-up">
-                                    <img src="https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg"
-                                        class="img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <h4>Massage 2</h4>
-                                    <p class="pb-3">Indien</p>
-                                    <a class="rotate-btn" data-card="card-1" (click)="cards5.toggle()">
-                                        <i class="fas fa-redo"></i> En savoir plus</a>
-                                </div>
-                            </div>
-                            <div class="back tp-box_side tp-box_back">
-                                <h4>About massage</h4>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae,
-                                    dolores dicta. Blanditiis rem
-                                    amet repellat,
-                                    dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum
-                                    eum, officia laudantium
-                                    quaerat?</p>
-                                <hr>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm fb-ic">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm tw-ic">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a class="rotate-btn" data-card="card-1" (click)="cards5.toggle()">
-                                    <i class="fas fa-undo"></i> Click here to rotate back</a>
-                            </div>
-                        </mdb-flipping-card>
-                    </div>
-                    <div class="col-md-4 mb-2">
-                        <mdb-flipping-card #cards6>
-                            <div class="face front tp-box_side tp-box_front">
-                                <div class="card-up">
-                                    <img src="https://cdn.pixabay.com/photo/2018/11/05/09/53/massage-3795691_960_720.jpg"
-                                        class="img-fluid">
-                                </div>
-                                <div class="card-body">
-                                    <h4>Massage 3</h4>
-                                    <p class="pb-3">Indien</p>
-                                    <a class="rotate-btn" data-card="card-1" (click)="cards6.toggle()">
-                                        <i class="fas fa-redo"></i> Click here to rotate</a>
-                                </div>
-                            </div>
-                            <div class="back tp-box_side tp-box_back">
-                                <h4>About massage</h4>
-                                <hr>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quae,
-                                    dolores dicta. Blanditiis rem
-                                    amet repellat,
-                                    dolores nihil quae in mollitia asperiores ut rerum repellendus, voluptatum
-                                    eum, officia laudantium
-                                    quaerat?</p>
-                                <hr>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm fb-ic">
-                                            <i class="fab fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a class="icons-sm tw-ic">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <a class="rotate-btn" data-card="card-1" (click)="cards6.toggle()">
-                                    <i class="fas fa-undo"></i> Click here to rotate back</a>
-                            </div>
-                        </mdb-flipping-card>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Back to navbar button -->
-<div class="fixed-action-btn invisible" id="scrollButton" style="bottom: 45px; right: 24px;">
-    <a mdbBtn floating="true" size="lg" color="dark" class="waves-light" #button mdbWavesEffect mdbPageScroll
-        href="#top-section">
-        <mdb-icon fas icon="arrow-up"></mdb-icon>
-    </a>
 </div>
