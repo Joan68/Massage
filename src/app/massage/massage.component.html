@@ -39,8 +39,8 @@
                                             [ngx-scroll-to]="'SoinsEtoile'">Soins Etoile tête mains pieds</button></li> -->
                                     <li><button class="colorBoutton" (click)="sidenav.hide()"
                                             [ngx-scroll-to]="'Udvartana'">Udvartana</button></li>
-                                    <!-- <li><button class="colorBoutton" (click)="sidenav.hide()"
-                                            [ngx-scroll-to]="'Ananda'">Ananda</button></li> -->
+                                    <li><button class="colorBoutton" (click)="sidenav.hide()"
+                                            [ngx-scroll-to]="'DosTeteMainPied'">Dos, Tete, Mains et Pieds</button></li>
                                     <!-- <li><button class="colorBoutton" (click)="sidenav.hide()"
                                             [ngx-scroll-to]="'Mardana'">Mardana</button></li> -->
                                     <li><button class="colorBoutton" (click)="sidenav.hide()"
@@ -204,6 +204,48 @@
                                             base de farine de farine de pois chiche et de plantes activant la
                                             microcirculation)
                                             <strong>75 mn :</strong> 85 €</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                        </mdb-tabset>
+                    </mdb-card-body>
+                    <!--/.Card content-->
+
+                </mdb-card>
+                <!--/.Card-->
+
+                <!--/.Card -->
+
+                <!-- Card -->
+                <mdb-card cascade="true" class="mb-3" id="DosTeteMainPied" #DosTeteMainPiedRef>
+                    <!--Card image-->
+                    <div class="view view-cascade gradient-card-header sunny-morning-gradient">
+                        <h2 class="card-header-title text-dark">Massage relaxant du dos, tête, mains et pieds</h2>
+                    </div>
+                    <!--/Card image-->
+                    <mdb-card-body cascade="true" class="text-justify">
+                        <!--Card content-->
+
+                        <!-- Nav Tabs -->
+                        <mdb-tabset #staticTabs [vertical]="true"
+                            [buttonClass]="'md-tabs tabs-3 sunny-morning-gradient'" [contentClass]="'card'">
+                            <!--Panel 1-->
+                            <mdb-tab heading="Informations">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p>Massage effectué à l'huile chaude et aux plantes selon votre constitution et
+                                            qui comprend des mouvements doux, modérés, nourrissants, équilibrants et
+                                            harmonisants.</p>
+                                        <p>Il calme le mental, apaise les émotions telles que la nervosité et l'anxiété.</p>
+                                    </div>
+                                </div>
+                            </mdb-tab>
+                            <!--Panel 2-->
+                            <mdb-tab heading="Prix">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><strong>45 mn :</strong> 45€
+                                        </p>
                                     </div>
                                 </div>
                             </mdb-tab>

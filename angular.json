@@ -39,8 +39,8 @@
               "node_modules/chart.js/dist/Chart.js",
               "node_modules/easy-pie-chart/dist/easypiechart.js",
               "node_modules/screenfull/dist/screenfull.js",
-              "node_modules/hammerjs/hammer.min.js"]
-              ,
+              "node_modules/hammerjs/hammer.min.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
@@ -147,5 +147,8 @@
       }
     }
   },
-  "defaultProject": "Massage"
+  "defaultProject": "Massage",
+  "cli": {
+    "analytics": "06c8dd3a-c5e6-4710-a66a-c97ada4cb84b"
+  }
 }
